@@ -69,13 +69,11 @@ Player = function(game, canvas) //On définit l'objet Player dans lequel on va p
   {
     if(_this.rotEngaged === true) //si notre souris est bien capturée dans notre scène
     {
-		if(_this.rotEngaged === true){
 			_this.camera.rotation.y+=evt.movementX * 0.001 * (_this.angularSensibility / 250);
 			var nextRotationX = _this.camera.rotation.x + (evt.movementY * 0.001 * (_this.angularSensibility / 250));
 			if( nextRotationX < degToRad(90) && nextRotationX > degToRad(-90)){
 				_this.camera.rotation.x+=evt.movementY * 0.001 * (_this.angularSensibility / 250);
 			}
-		}
       //TODO
     }
   }, false);
